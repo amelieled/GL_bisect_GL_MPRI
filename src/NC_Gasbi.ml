@@ -146,7 +146,7 @@ let morder_lt m1 m2 =
 (* ------------------------------------------------------------------------- *)
 
 let mpoly_cmul c (pol:pol) :pol =
-  if c = Int 0 []
+  if c = Int 0 then []
   else map (fun m -> {m with coeff=c*/m.coeff}) pol;;
 
 let mpoly_mmul cm (pol:pol) :pol = map (mmul cm) pol;;
